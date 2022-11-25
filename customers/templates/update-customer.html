@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add customer</title>
+</head>
+<body>
+    <h1>Update Customer Record</h1>
+
+    <form action="updateCustomerRecord/{{myCustomer.id}}" method="post">
+        {% csrf_token %}
+        <label for="firstname"> Firstname</label>
+        <input type="text" name="firstname" value="{{myCustomer.firstname}}"/><br><br>
+        <label for="lastname"> LastName</label>
+        <input type="text" name="lastname" value="{{myCustomer.lastname}}"/> <br><br>
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+</html>
